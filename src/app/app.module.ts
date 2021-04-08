@@ -11,7 +11,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
-import { from } from 'rxjs';
+
 import { TemaComponent } from './tema/tema.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
@@ -20,6 +20,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule} from 'ngx-order-pipe'
 
 @NgModule({
   declarations: [ 
@@ -42,7 +43,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
